@@ -21,7 +21,7 @@ steps:
       - '-c'
       - |
           PROJECT=devops-343007
-          gcloud container clusters get-credentials "tk-cluster" \
+          gcloud container clusters get-credentials omar-moviedb-dev-cluster \
             --project "devops-343007" \
             --zone "us-west2-a" 
           
