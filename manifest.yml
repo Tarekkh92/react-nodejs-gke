@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: react-webapp
-  name: react-webapp
+  name: tk-react-webapp
 spec:
   replicas: 5
   selector:
@@ -18,8 +18,8 @@ spec:
         app: react-webapp
     spec:
       containers:
-      - image: gcr.io/staticweb-test/react-webapp:v1
-        name: webapp
+      - image: gcr.io/devops-343007/tk-image:v1
+        name: tk-webapp
         imagePullPolicy: Always
         resources: {}
         ports:
@@ -31,7 +31,7 @@ status: {}
 apiVersion: v1
 kind: Service
 metadata:
-  name: react-webapp
+  name: tk-react-webapp
   labels:
     run: react-webapp
 spec:
